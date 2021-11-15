@@ -75,7 +75,7 @@ func (d *db) rowsQuery(ctx context.Context, path string, opts map[string]interfa
 			fmt.Println("err", err)
 		}
 		fmt.Println("Print!!!", keys)
-		fmt.Println("Print!!! data", data)
+		fmt.Println("Print!!! data", string(data))
 		delete(query, "keys")
 	}
 
