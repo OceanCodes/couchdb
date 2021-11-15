@@ -64,7 +64,7 @@ func (d *db) rowsQuery(ctx context.Context, path string, opts map[string]interfa
 	}
 	options := &chttp.Options{}
 	method := kivik.MethodGet
-	if keys, ok := query["keys"]; ok {
+	if keys, ok := opts["keys"]; ok {
 		method = kivik.MethodPost
 		options.Body = chttp.EncodeBody(map[string]interface{}{
 			"keys": keys,
