@@ -59,7 +59,7 @@ func optionsToParams(opts ...map[string]interface{}) (url.Values, error) {
 // rowsQuery performs a query that returns a rows iterator.
 func (d *db) rowsQuery(ctx context.Context, path string, opts map[string]interface{}) (driver.Rows, error) {
 	query, err := optionsToParams(opts)
-	print("Query!!!", query["keys"])
+	fmt.Println("Query!!!", query["keys"])
 	if err != nil {
 		return nil, err
 	}
