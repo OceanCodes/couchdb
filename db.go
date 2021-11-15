@@ -66,13 +66,8 @@ func (d *db) rowsQuery(ctx context.Context, path string, opts map[string]interfa
 	method := kivik.MethodGet
 	if keys, ok := query["keys"]; ok {
 		method = kivik.MethodPost
-		var keysDecoded []string
-		err := json.NewDecoder(strings.NewReader(keys[0])).Decode(&keysDecoded)
-		if err != nil {
-			return nil, err
-		}
 		options.Body = chttp.EncodeBody(map[string][]string{
-			"keys": keysDecoded,
+			"keys": keys,
 		})
 		delete(query, "keys")
 	}
