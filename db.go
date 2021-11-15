@@ -69,9 +69,10 @@ func (d *db) rowsQuery(ctx context.Context, path string, opts map[string]interfa
 		options.Body = chttp.EncodeBody(map[string]interface{}{
 			"keys": keys,
 		})
+		fmt.Println("Print!!!", options)
 		delete(query, "keys")
 	}
-	fmt.Println("Print!!!", options)
+
 	resp, err := d.Client.DoReq(ctx, method, d.path(path, query), options)
 	if err != nil {
 		return nil, err
