@@ -70,7 +70,7 @@ func (d *db) rowsQuery(ctx context.Context, path string, opts map[string]interfa
 		options.Body = chttp.EncodeBody(map[string]interface{}{
 			"keys": keys,
 		})
-		data, err := ioutil.ReadAll(r)
+		data, err := ioutil.ReadAll(options.Body)
 		if err != nil {
 			fmt.Println("err", err)
 		}
