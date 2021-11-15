@@ -69,7 +69,7 @@ func (d *db) rowsQuery(ctx context.Context, path string, opts map[string]interfa
 		options.Body = chttp.EncodeBody(map[string]interface{}{
 			"keys": keys,
 		})
-		fmt.Println("Print!!!", options.Body)
+		fmt.Println("Print!!!", options.Body["keys"])
 		delete(query, "keys")
 	}
 
