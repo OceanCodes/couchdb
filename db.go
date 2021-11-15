@@ -71,6 +71,9 @@ func (d *db) rowsQuery(ctx context.Context, path string, opts map[string]interfa
 			"keys": keys,
 		})
 		data, err := ioutil.ReadAll(r)
+		if err != nil {
+			fmt.Println("err", err)
+		}
 		fmt.Println("Print!!!", keys)
 		fmt.Println("Print!!! data", data)
 		delete(query, "keys")
