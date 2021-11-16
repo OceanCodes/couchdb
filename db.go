@@ -71,7 +71,7 @@ func (d *db) rowsQuery(ctx context.Context, path string, opts map[string]interfa
 		err := json.NewDecoder(strings.NewReader(keys[0])).Decode(&keysDecoded)
 		if err != nil {
 
-			err = json.NewDecoder(strings.NewReader(keys[0][0])).Decode(&keysDecoded2)
+			err = json.NewDecoder(strings.NewReader(keys[0])).Decode(&keysDecoded2)
 			return nil, err
 		}
 		if len(keysDecoded) > 0 {
@@ -79,7 +79,7 @@ func (d *db) rowsQuery(ctx context.Context, path string, opts map[string]interfa
 				"keys": keysDecoded,
 			})
 		} else if len(keysDecoded2) > 0 {
-			options.Body = chttp.EncodeBody(map[string][]string{
+			options.Body = chttp.EncodeBody(map[string][][]string{
 				"keys": keysDecoded2,
 			})
 		}
