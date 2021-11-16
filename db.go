@@ -67,13 +67,23 @@ func (d *db) rowsQuery(ctx context.Context, path string, opts map[string]interfa
 	if keys, ok := query["keys"]; ok {
 		method = kivik.MethodPost
 		var keysDecoded []string
+		var keysDecoded2 [][]string
 		err := json.NewDecoder(strings.NewReader(keys[0])).Decode(&keysDecoded)
 		if err != nil {
+
+			err = json.NewDecoder(strings.NewReader(keys[0][0])).Decode(&keysDecoded2)
 			return nil, err
 		}
-		options.Body = chttp.EncodeBody(map[string][]string{
-			"keys": keysDecoded,
-		})
+		if len(keysDecoded) > 0 {
+			options.Body = chttp.EncodeBody(map[string][]string{
+				"keys": keysDecoded,
+			})
+		} else if len(keysDecoded2) > 0 {
+			options.Body = chttp.EncodeBody(map[string][]string{
+				"keys": keysDecoded2,
+			})
+		}
+
 		delete(query, "keys")
 	}
 	resp, err := d.Client.DoReq(ctx, method, d.path(path, query), options)
