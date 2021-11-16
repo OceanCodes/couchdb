@@ -75,7 +75,16 @@ func (d *db) rowsQuery(ctx context.Context, path string, opts map[string]interfa
 			fmt.Println("err", err)
 		}
 		fmt.Println("Print!!!", keys)
+
+		var res [][]string
+		err := json.Unmarshal(data, &res)
+		if err != nil {
+			fmt.Printf("err %v", err)
+		} else {
+			fmt.Printf("Print!!! res %v\n", res)
+		}
 		fmt.Println("Print!!! data", string(data))
+
 		delete(query, "keys")
 	}
 
