@@ -76,7 +76,7 @@ func (d *db) rowsQuery(ctx context.Context, path string, opts map[string]interfa
 		}
 		fmt.Println("Print!!!", keys)
 
-		var res [][]string
+		var res map[string][][]string
 		err = json.Unmarshal(data, &res)
 		if err != nil {
 			fmt.Printf("err %v", err)
