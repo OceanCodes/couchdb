@@ -1,15 +1,11 @@
 bou.ke/monkey v1.0.1/go.mod h1:FgHuK96Rv2Nlf+0u1OOVDpCMdsWyOFmeeketDHE7LIg=
 github.com/davecgh/go-spew v1.1.1 h1:vj9j/u1bqnvCEfJOwUhtlOARqs3+rkHYY13jYWTU97c=
 github.com/davecgh/go-spew v1.1.1/go.mod h1:J7Y8YcW2NihsgmVo/mv3lAwl/skON4iLHjSsI+c5H38=
-github.com/flimzy/diff v0.1.5 h1:QfOwp+TuGCeWWFxFtXqCdepnz0SeaImgNfMm6vWz3y8=
 github.com/flimzy/diff v0.1.5/go.mod h1:lFJtC7SPsK0EroDmGTSrdtWKAxOk3rO+q+e04LL05Hs=
-github.com/flimzy/testy v0.1.17-0.20190521133342-95b386c3ece6 h1:uw6StVCll2vXdHJMAiKvhfAwcwBYD6d9dgWOIdHMku8=
 github.com/flimzy/testy v0.1.17-0.20190521133342-95b386c3ece6/go.mod h1:3szguN8NXqgq9bt9Gu8TQVj698PJWmyx/VY1frwwKrM=
 github.com/go-kivik/kivik v2.0.0+incompatible h1:/7hgr29DKv/vlaJsUoyRlOFq0K+3ikz0wTbu+cIs7QY=
 github.com/go-kivik/kivik v2.0.0+incompatible/go.mod h1:nIuJ8z4ikBrVUSk3Ua8NoDqYKULPNjuddjqRvlSUyyQ=
-github.com/go-kivik/kivik/v3 v3.0.0-pre1 h1:9LMdKntRidwO/sou+ICYhAm/u6BvLyRlut2kAoKqheI=
 github.com/go-kivik/kivik/v3 v3.0.0-pre1/go.mod h1:+4F5AG/l5+s1DKAu/SVREvNFa/ffVpwlG32gXB8yUng=
-github.com/go-kivik/kivik/v4 v4.0.0-20200214160900-846fe547c809 h1:tHMOmNuZ5G9p7lx0ogfEaaG/RIkVeuKEriFX4llWTEQ=
 github.com/go-kivik/kivik/v4 v4.0.0-20200214160900-846fe547c809/go.mod h1:yZnDIahvQZWysqlj1PZ3xS3uAldJ7LnAeBnCI7i/r20=
 github.com/go-kivik/kivik/v4 v4.0.0-20200428195616-ad16c89fd2be h1:mEn538cbR+6f6ZFYuZ6iQhVLaFKNKDQRGuTOSUYwKpk=
 github.com/go-kivik/kivik/v4 v4.0.0-20200428195616-ad16c89fd2be/go.mod h1:O2fxy5xMXO7vaVr2gQG38sYTj/mHwg5Md/8kP7qUZQk=
